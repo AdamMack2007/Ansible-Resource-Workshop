@@ -1,0 +1,18 @@
+---
+- name: configure Syslog
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+
+  - name: Configured Syslog
+    cisco.ios.ios_logging_global:
+      config:
+       buffered:
+         severity: notifications
+       console:
+         severity: critical
+       facility: local5
+       hosts:
+         - hostname: 1.2.3.4
+      state: replaced
