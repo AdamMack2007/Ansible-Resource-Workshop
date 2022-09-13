@@ -5,7 +5,7 @@
 
   tasks:
 
-  - name: Configured Syslog
+  - name: Configure Syslog
     cisco.ios.ios_logging_global:
       config:
        buffered:
